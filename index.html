@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas - Alura Dev</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://alura.com.br" alt="Logo Alura" class="logo">
+        <h1>Gerador de Senhas</h1>
+        
+        <div class="input-container">
+            <input type="text" id="password" readonly placeholder="Sua senha aparecerá aqui">
+            <button id="copy-btn" onclick="copyPassword()">Copiar</button>
+        </div>
+
+        <div class="customize-container">
+            <label for="length-slider">Tamanho da senha: <span id="length-val">12</span> caracteres</label>
+            <input type="range" id="length-slider" min="6" max="32" value="12" oninput="updateSliderValue()">
+        </div>
+
+        <button id="generate-btn" class="main-btn" onclick="generatePassword()">Gerar Senha Forte</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
